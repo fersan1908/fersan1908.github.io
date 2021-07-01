@@ -1,0 +1,255 @@
+/*GENERAL AND BACKGROUND IDEA*/
+
+:root{
+    --title-color: #502050;
+    --subtitle-color: #937B92;
+    --bg-ratings: #F7F2F7;
+    --verified-buyer: #EE68A4;
+    --white: #FFF;
+}
+
+*{
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+body::after{
+    color: transparent;
+    content: 'If you read this follow me on instagram fersan1908';
+    width: 530px;
+    height: 330px;
+    background-image: url(./items/images/bg-pattern-top-desktop.svg);
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;  
+    z-index: -1; 
+}
+
+body::before{
+    color: transparent;
+    content: 'If you read this follow me on instagram fersan1908';
+    width: 910px;
+    height: 565px;
+    background-image: url(./items/images/bg-pattern-bottom-desktop.svg);
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    bottom: 0;
+    right: 0;  
+    z-index: -1;
+}
+
+.content{
+    width: 80%;
+    margin: 20px 0;
+    max-width: 1080px;
+}
+/* END GENERAL*/
+
+/*TOP OF WEBSITE*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/**/
+.title__container{
+    flex: 5;
+}
+
+.ratings__container{
+    flex: 7;
+}
+
+.main__title{
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.subtitle{
+    color: var(--subtitle-color);
+    font-weight: 400;
+    line-height: 25px;
+}
+/**/
+/**/
+.ratings__container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+
+.rate{
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    height: calc(75% / 3);
+    border-radius: 10px;
+    background-color: var(--bg-ratings);
+    color: var(--title-color);
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star{ margin: 0 5px; }
+.star:first-child{ margin-left: 30px;}
+
+.rate__title{
+    color: var(--title-color);
+    font-weight: 700;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+}
+
+.rate:first-child{ transform: translateX(-120px); }
+.rate:nth-child(2){ transform: translateX(-60px); }
+
+/**/
+.cards{
+    display: grid;
+    margin-top: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--title-color);
+    padding: 25px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.head__card{
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.pic__card{
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.person__info{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.name{ font-weight: 500; }
+.verified{
+    color: var(--verified-buyer);
+}
+
+.description__card{
+    font-weight: 400;
+    line-height: 23px;
+    font-size: 13px;
+}
+
+.card:nth-child(2){ transform: translateY(20px); }
+.card:last-child{ transform: translateY(40px); }
+
+/**/
+
+footer{
+    display: block;
+    margin-top: 60px;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer p a{
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+/**/
+@media (max-width: 1200px){
+    .rate {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 850px){
+    .content{
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px){
+    .content{ margin: 50px 0; }
+
+
+    body::after{
+        width: 455px;
+        height: 280px;
+        background-image: url(./items/images/bg-pattern-top-mobile.svg);
+    }
+    
+    body::before{
+        width: 451px;
+        height: 166px;
+        background-image: url(./items/images/bg-pattern-bottom-mobile.svg);
+    }
+
+
+
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .ratings__container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+    
+    .rate{ 
+        display: flex;
+        height: 70px; 
+        width: 100%;
+    }
+    .rate:first-child{ transform: translateX(0); }
+    .rate:nth-child(2){ 
+        transform: translateX(0); 
+        margin: 20px 0;
+    }
+
+    .cards{ grid-template-columns: repeat(1, 1fr); }
+    .card:nth-child(2){ transform: translateY(0); }
+    .card:last-child{ transform: translateY(0); }
+}
