@@ -28,6 +28,7 @@ body{
 .nosolo{
     background-color: blue;
     border-radius: 1vw;
+    padding-top: 1vw;
     color: #e0e0e0;
     transform: translateY(10%);
 }
