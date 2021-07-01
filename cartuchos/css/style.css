@@ -28,7 +28,7 @@ body{
 .nosolo{
     background-color: blue;
     border-radius: 1vw;
-    padding-top: 1vw;
+    padding-top: 1.15vw;
     color: #e0e0e0;
     transform: translateY(10%);
 }
@@ -107,7 +107,7 @@ body{
   }
 
 .box{
-    margin: 0 auto;
+    margin: 35px auto;
     max-width: 70%;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
