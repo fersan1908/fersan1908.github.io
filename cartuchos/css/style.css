@@ -34,7 +34,6 @@ body{
 
 .cartuchos{
     color: red;
-    transform: translateY(10%);
 }
 
 .puntoes{
@@ -72,7 +71,7 @@ body{
         transform: translateY(-100%);
     }
     75%  {
-        transform: translateY(20%);
+        transform: translateY(10%);
     }
     100% {
         transform: translateY(0);
@@ -87,7 +86,7 @@ body{
         transform: translateY(-100%);
     }
     75%  {
-        transform: translateY(20%);
+        transform: translateY(10%);
     }
     100% {
         transform: translateY(0);
