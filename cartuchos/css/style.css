@@ -23,20 +23,18 @@ body{
     font-family: Logo Font;
     font-size: 8vw;
     text-transform: uppercase;
-    top: -1vw;
 }
 
 .nosolo{
     background-color: blue;
     border-radius: 1vw;
     color: #e0e0e0;
-    height: 7vw;
-    padding-bottom: 0.7vw;
-    padding-top:-2vw;
+    transform: translateY(10%);
 }
 
 .cartuchos{
     color: red;
+    transform: translateY(10%);
 }
 
 .puntoes{
@@ -74,7 +72,7 @@ body{
         transform: translateY(-100%);
     }
     75%  {
-        transform: translateY(10%);
+        transform: translateY(20%);
     }
     100% {
         transform: translateY(0);
@@ -89,7 +87,7 @@ body{
         transform: translateY(-100%);
     }
     75%  {
-        transform: translateY(10%);
+        transform: translateY(20%);
     }
     100% {
         transform: translateY(0);
