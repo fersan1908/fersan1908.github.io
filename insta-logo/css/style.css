@@ -1,1 +1,130 @@
+:root {
+    --circle: 50%;
+    /*Contenedor del logo, tamaño, bordes, etc*/
+    --box-size: 25vw;
+    --logo-size: calc( (var(--box-size) / 100) * 73.23);
+    --border-size: calc( (var(--box-size) / 100) * 6.32);
+    --border-radius-size: calc( (var(--box-size) / 100) * 21.18);
+    /*Tamaño y posicionamiento del circulo central*/
+    --middle-circle-size: calc( (var(--box-size) / 100) * 37.17);
+    --middle-circle-position: calc( (var(--box-size) / 100) * 11.71);
+    /*Tamaño y posicionamiento del circulito superior derecho*/
+    --mini-circle-size: calc( (var(--box-size) / 100) * 8.55);
+    --mini-circle-position: calc( (var(--box-size) / 100) * 6.32);
+}
 
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Billabong', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+h1{
+    font-size: 5vw;
+    margin: 0;
+}
+
+.insta__box{
+    position: relative;
+    width: var(--box-size);
+    height: var(--box-size);
+    background: linear-gradient(
+        145deg,
+        #3051F1 10%,
+        #C92BB7 70%
+     ) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--circle);
+    box-shadow: 0 0 15px 2px #000000;
+}
+
+.insta__box::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    background: radial-gradient(
+        circle farthest-corner at 28% 100%,
+         #FCDF8F 0%,
+          #FBD377 10%,
+           #FA8E37 22%,
+            #F73344 35%,
+             rgba(247, 51, 68, 0) 65%
+             ) no-repeat;
+    border-radius: var(--circle);
+}
+
+.insta__logo{
+    position: absolute;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    background: transparent;
+    border: var(--border-size) solid #fff;
+    border-radius: var(--border-radius-size);
+}
+
+.insta__logo::before{
+    content: '';
+    position: inherit;
+    top: var(--middle-circle-position);
+    left: var(--middle-circle-position);
+    width: var(--middle-circle-size);
+    height: var(--middle-circle-size);
+    border-radius: var(--circle);
+    border: var(--border-size) solid #fff;
+    background: transparent;
+}
+
+.insta__logo::after{
+    content: '';
+    position: inherit;
+    top: var(--mini-circle-position);
+    right: var(--mini-circle-position);
+    width: var(--mini-circle-size);
+    height: var(--mini-circle-size);
+    background-color: white;
+    border-radius: var(--circle);
+}
+
+.follow{
+    position: absolute;
+    right: -11vw;
+    top: 0;
+    font-size: 2vw;
+    animation-duration: 2.5s;
+    animation-name: follow;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes follow {
+    0% {
+        opacity: 1;
+    }
+  
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+.arrow{
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 5px;
+    transform: rotateZ(-20deg) translateY(10px);
+}
